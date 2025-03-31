@@ -57,11 +57,24 @@ const createMemeberCard = (member) => {
                     </div>
                 </div>`;
 
-      console.log(card)
+      return card
 }
 
+const renderTeam = () => {
+  
 
-// ciclo l'array 
-for (let i=0; i<teamMembers.length; i++){
-  createMemeberCard(teamMembers[i])
+  // stringa vuota per le colonne
+  let cardAll = '';
+
+  // ciclo l'array 
+  for (let i=0; i<teamMembers.length; i++){
+    cardAll += createMemeberCard(teamMembers[i])
+  }
+
+  document.getElementById('team-members').innerHTML = cardAll;
+
 }
+
+renderTeam()
+
+
