@@ -121,4 +121,6 @@ button.addEventListener('click', (e) => {
   imgField.value='';
 
   
+  renderTeam(teamMembers)
+
 })
