@@ -1,0 +1,25 @@
+.form-container{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.form{
+    width: 500px;
+}
+
+form div{
+    margin-bottom: 20px;
+}
+
+.my-button{
+    background-color: rgb(168, 167, 167);
+    border: 1px solid black;
+    width: 150px;
+    padding: 5px;
+    transition: 0.3s;
+}
+
+.my-button:hover{
+    background-color: transparent;
+}
