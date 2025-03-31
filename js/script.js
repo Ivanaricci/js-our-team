@@ -37,6 +37,16 @@ const teamMembers = [
   }
 ];
 
+// recupero gli elementi del DOM
+
+const nameField = document.getElementById('name');
+const roleField = document.getElementById('role');
+const emailField = document.getElementById('email');
+const imgField = document.getElementById('img');
+const button = document.getElementById('send');
+const membersList = document.getElementById('team-members');
+
+
 
 // funzione per le card
 const createMemeberCard = (member) => {
@@ -78,3 +88,37 @@ const renderTeam = () => {
 renderTeam()
 
 
+
+button.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  const name = nameField.value;
+  const role = roleField.value;
+  const email = emailField.value;
+  const img = imgField.value;
+
+
+  // validazione
+  if(!name || !role || !email || !img){
+    alert('Devi inserire tutti i campi')
+
+    return
+  }
+
+
+  // nuovo oggetto da inserire nell'array
+  const newMember = {
+    name,
+    role,
+    img,
+  }
+
+  teamMembers.push(newMember);
+
+  nameField.value= '';
+  roleField.value='';
+  emailField.value='';
+  imgField.value='';
+
+  
+})
